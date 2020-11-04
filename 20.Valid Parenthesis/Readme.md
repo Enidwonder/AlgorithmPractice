@@ -36,11 +36,15 @@ Output: true
 
 ### My solution
 
+​	By analysing the characteristics of bracket matching,  I choose to make use of the "first-in-first-out" feature of stack for storage of brackets.
 
+​	If the input is a left bracket, it must be waiting for a right bracket to match, so we push it into stack. If the input is a right bracket, it will only make sense when it matches the nearest left bracket. So we get the top bracket from the stack and if they match, pop it out of the stack and get the next input. But if they don't match, just return false. 
+
+​	Repeat the process until the end of input. Note that if now the stack is not empty, it means that there exists left bracket not being matched, return false then. Otherwise, return true.
 
 ### Other solutions
 
-
+It seems the stack method is the most common way.
 
 ### *PS: My codes
 
